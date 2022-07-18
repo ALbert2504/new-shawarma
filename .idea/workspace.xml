@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b10d73e-c67c-4faf-8890-915997df38f2" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2B54XQlknClstB8APdzaQilvwq6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/developer/Desktop/My Files/Projects/new-shawarma/client/src/assets/images&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/developer/Desktop/My Files/Projects/new-shawarma/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/assets/images" />
+      <recent name="$PROJECT_DIR$/client/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/hooks/useFormState" />
+      <recent name="$PROJECT_DIR$/client/src/pages/user/Auth" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b10d73e-c67c-4faf-8890-915997df38f2" name="Changes" comment="" />
+      <created>1656182655192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656182655192</updated>
+      <workItem from="1656182656573" duration="7981000" />
+      <workItem from="1656225314311" duration="8298000" />
+      <workItem from="1656273873769" duration="890000" />
+      <workItem from="1656301113567" duration="2937000" />
+      <workItem from="1656321840792" duration="21000" />
+      <workItem from="1656354952266" duration="9546000" />
+      <workItem from="1656394702848" duration="128000" />
+      <workItem from="1656869584093" duration="8588000" />
+      <workItem from="1656878202390" duration="105000" />
+      <workItem from="1656878332245" duration="3095000" />
+      <workItem from="1656905311882" duration="22000" />
+      <workItem from="1656958554678" duration="9456000" />
+      <workItem from="1656998035424" duration="94000" />
+      <workItem from="1657977819230" duration="7386000" />
+      <workItem from="1658114960509" duration="4340000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/client/src/pages/user/Auth/index.d.ts" />
+        <option value="$PROJECT_DIR$/client/src/pages/user/Auth/index.d.ts" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
