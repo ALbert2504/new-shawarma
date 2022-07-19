@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form, Button } from 'react-bootstrap';
 
@@ -7,20 +8,26 @@ import { useAppDispatch } from '../../../../../store/configureStore';
 import { IOrderDetailsData } from '../../../../../types/order';
 
 // Actions
-import { createOrder } from '../../../../../store/order/order.actions';
+import { createOrder, updateOrderSummary } from '../../../../../store/order/order.actions';
 
 const OrderDetails = () => {
   const dispatch = useAppDispatch();
 
-  const { register, handleSubmit } = useForm<IOrderDetailsData>({
+  const { register, handleSubmit, watch } = useForm<IOrderDetailsData>({
     defaultValues: {
       exceptions: [],
     },
   });
 
+  const { exceptions, size } = watch();
+
   const handleSubmitOrder = (data: IOrderDetailsData) => {
     dispatch(createOrder(data));
   };
+
+  useEffect(() => {
+    dispatch(updateOrderSummary({ size, exceptions }));
+  }, [size, exceptions]);
 
   return (
     <div className="border border-2 border-primary rounded p-3">
@@ -32,7 +39,7 @@ const OrderDetails = () => {
           <Form.Label className="mb-0">Չափ</Form.Label>
           <Form.Select {...register('size', { required: true })}>
             <option value="Մեծ">Մեծ</option>
-            <option value="Փոքր">Փոքր</option>
+            {/*<option value="Փոքր">Փոքր</option>*/}
           </Form.Select>
         </Form.Group>
         <div>
@@ -58,7 +65,7 @@ const OrderDetails = () => {
           *Շաուրման միայն լավաշով է
         </p>
         <Button type="submit" className="ms-auto d-block">
-          Պտվիրել
+          Պատվիրել
         </Button>
       </Form>
     </div>
