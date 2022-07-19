@@ -1,7 +1,7 @@
-import { IOrder, IOrderDetailsData } from '../../types/order';
+import { IOrderDetailsData, ModifiedOrderType } from '../../types/order';
 
 interface IOrderState {
-  orders: IOrder[];
-  myOrders: IOrder[];
+  orders: ModifiedOrderType[];
+  myOrders: ModifiedOrderType[];
   orderSummary: IOrderDetailsData;
 }

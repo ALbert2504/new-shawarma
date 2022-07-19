@@ -22,6 +22,14 @@ class Api {
   static catchUserNotFoundError() {
     throw new Error('Wrong email or password.');
   }
+
+  // Transformers
+  static transformData([key, value]: [string, any]) {
+    return {
+      id: key,
+      ...value,
+    };
+  }
 }
 
 export default Api;

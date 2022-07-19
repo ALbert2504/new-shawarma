@@ -5,7 +5,7 @@ import moment from 'moment';
 import { OrderModel } from '../models';
 
 // Types
-import { IOrder } from '../types/order';
+import { ModifiedOrderType } from '../types/order';
 
 // Constants
 import { defaultDateFormat } from '../constants';
@@ -40,12 +40,29 @@ class Order extends Api {
     }
   }
 
-  static async getOrder(orderId: string): Promise<IOrder | void> {
+  static async getOrder(orderId: string): Promise<ModifiedOrderType | void> {
     try {
       const orderRef = ref(db);
-      const snapshot = await get(child(orderRef, `orders/${orderId}`));
+      const snapshot = await get(child(orderRef, `orders/${moment().format(defaultDateFormat)}/${orderId}`));
 
-      return snapshot.val();
+      return super.transformData([orderId, snapshot.val()]);
+    } catch (e) {
+      super.catchError(e);
+    }
+  }
+
+  static async getOrders(): Promise<ModifiedOrderType[] | void> {
+    try {
+      const orderRef = ref(db);
+      const snapshot = await get(child(orderRef, `orders/${moment().format(defaultDateFormat)}`));
+
+      if (!snapshot.val()) {
+        throw new Error('Այսօր ոչմի պատվեր չի գրանցվել։');
+      }
+
+      const orders = Object.entries(snapshot.val()).map(super.transformData);
+      console.log(orders, 'vaaaaaaaaaaax araaaaaaaaa');
+      return orders as ModifiedOrderType[];
     } catch (e) {
       super.catchError(e);
     }

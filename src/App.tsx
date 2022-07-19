@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 
 // Pages
-import { Auth, Order } from './pages';
+import { Auth, Order, Orders, MyOrders } from './pages';
 
 // Components
 import BaseLayout from './components/layouts/BaseLayout';
@@ -23,6 +23,8 @@ const App = () => {
         ) : (
           <Route path="/" element={<BaseLayout />}>
             <Route path="/" element={<Order />} />
+            <Route path="/my-orders" element={<MyOrders />} />
+            <Route path="/orders" element={<Orders />} />
           </Route>
         )}
       </Routes>

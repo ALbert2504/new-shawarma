@@ -26,7 +26,7 @@ const OrderDetails = () => {
   };
 
   useEffect(() => {
-    dispatch(updateOrderSummary({ size, exceptions }));
+    dispatch(updateOrderSummary({ size, exceptions: exceptions || [] }));
   }, [size, exceptions]);
 
   return (

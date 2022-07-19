@@ -20,13 +20,16 @@ const Order = () => {
       <h3 className="text-primary fw-bold mb-3">
         Ողջույն {fullName}։ Ի՞նչ տեսակի շաուրմա կցանկանայիք ուտել այսօր։ 🌯
       </h3>
+      <h4 className="text-secondary mb-2">
+        Այս պահին աշխատում ենք միայն Bon appetite֊ի հետ, բայց խոստանում ենք, որ մեզ կմիանան նոր գործընկերներ։
+      </h4>
       <Row>
-        <Col xs={12} lg={8}>
+        <Col sm={12} lg={8}>
           <OrderDetails />
         </Col>
-        <Col xs={12} lg={4}>
+        <Col className="mt-2 mt-lg-0" sm={12} lg={4}>
           <div className="border border-2 border-primary rounded p-3">
-            <OrderSummary />
+            <OrderSummary  />
           </div>
         </Col>
       </Row>

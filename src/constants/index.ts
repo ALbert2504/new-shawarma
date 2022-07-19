@@ -4,3 +4,4 @@ export { default as regexps } from './regexps';
 export { default as requestErrorMessages } from './requestErrorMessages';
 export { default as orderDetailsFormNames } from './orderDetailsFormNames';
 export * from './dateFormats';
+export { default as userRoles } from './userRoles';
