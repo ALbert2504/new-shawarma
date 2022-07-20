@@ -45,7 +45,7 @@ const BaseLayout = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <main style={{ minHeight: 'calc(100vh - 106px)' }}>
+      <main style={{ minHeight: 'calc(100vh - 128px)' }}>
         <div className={`mb-2 ${styles['shawarma-img-container']}`}>
           <img className={`d-block w-100 h-100 ${styles['shawarma-img']}`} src={shawarma2} alt="shawarma"/>
         </div>
@@ -55,7 +55,7 @@ const BaseLayout = () => {
           </div>
         </Container>
       </main>
-      <footer className="bg-primary" style={{ height: 50 }}>
+      <footer className="bg-primary py-4">
         <Container>
           <div className="h-100 d-flex align-items-center">
             <span className="text-white">

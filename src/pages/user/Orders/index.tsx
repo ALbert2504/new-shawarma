@@ -19,11 +19,11 @@ const Orders = () => {
   useEffect(() => {
     dispatch(getOrders());
   }, []);
-  console.log(orders, 'aloooooooooooooo');
+
   const ordersContent = (
     orders && orders.map((order) => {
       return (
-        <Col className="mb-2" xl={3} lg={4} md={6} sm={12}>
+        <Col key={order.id} className="mb-2" xl={3} lg={4} md={6} sm={12}>
           <OrderCard data={order} />
         </Col>
       )

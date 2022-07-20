@@ -13,7 +13,7 @@ import { createOrder, updateOrderSummary } from '../../../../../store/order/orde
 const OrderDetails = () => {
   const dispatch = useAppDispatch();
 
-  const { register, handleSubmit, watch } = useForm<IOrderDetailsData>({
+  const { register, handleSubmit, watch, reset } = useForm<IOrderDetailsData>({
     defaultValues: {
       exceptions: [],
     },
@@ -22,7 +22,9 @@ const OrderDetails = () => {
   const { exceptions, size } = watch();
 
   const handleSubmitOrder = (data: IOrderDetailsData) => {
-    dispatch(createOrder(data));
+    dispatch(createOrder(data)).then(() => {
+      reset();
+    });
   };
 
   useEffect(() => {

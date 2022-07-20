@@ -60,12 +60,23 @@ class Order extends Api {
         throw new Error('Այսօր ոչմի պատվեր չի գրանցվել։');
       }
 
-      const orders = Object.entries(snapshot.val()).map(super.transformData);
-      console.log(orders, 'vaaaaaaaaaaax araaaaaaaaa');
+      // const orders = Object.entries(snapshot.val()).map(super.transformData);
+      const orders = this.transformOrders(snapshot.val());
+
       return orders as ModifiedOrderType[];
     } catch (e) {
       super.catchError(e);
     }
+  }
+
+  static transformOrders(orders: any) {
+    return Object.entries(orders).map((order: [string, any]) => {
+      if (!order[1].exceptions) {
+        order[1].exceptions = [];
+      }
+
+      return super.transformData(order);
+    });
   }
 }
 
